@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roku Flashback</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <main id="app">
+        <h1 class="hidden">Roku Flashback Movies Browse</h1>
+        <header class="browseHeader">
+            <div id="logo">
+                <img src="images/main-logo.png" alt="Roku Logo">
+            </div>
+            <div id="burgerMenu">
+                <img src="images/burger.png" alt="Burger">
+            </div>
+            <div id="menuDropdown">
+                <ul>
+                    <li><a href="#">MOVIES</a></li>
+                    <li><a href="#">TV SHOWS</a></li>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><input id="search" type="text" value="Search"></li>
+                    <li><a href="#" id="logout">LOG OUT</a></li>
+                </ul>
+            </div>
+
+            <div id="desktopMenu">
+                <ul>
+                    <li><a href="#">MOVIES</a></li>
+                    <li><a href="#">TV SHOWS</a></li>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><input type="text" value="Search"></li>
+                    <li><a href="#" id="logout">LOG OUT</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="movieBrowse">
+            <h2 class="hidden">Browsing Adult Section - Movies</h2>
+            <div class ="hero">
+                <img src="images/movie_bg.jpg" alt="Background">
+            </div>
+            <section class="filtering">
+                <h2 class="hidden">Filter Movies</h2>
+                <div id="genre">
+                    <p>Genres</p>
+                    <ul id="filteringList">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Adventure</a></li>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Crime</a></li>
+                    </ul>
+                </div>
+    
+                <div id="genre">
+                    <p>Sort By</p>
+                    <ul id="filteringList">
+                        <li><a href="#">Oldest</a></li>
+                        <li><a href="#">Latest</a></li>
+                        <li><a href="#">Rating</a></li>
+                        <li><a href="#">Alphabetical</a></li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!--Put Data from PHP here-->
+            <h2 id="banner-name">Trending</h2>
+            <section class="allMovies">
+                <h2 class="hidden">All Movies</h2>
+                <moviebrowse-card v-for="mov in moviesChoices" :mov="mov" key="mov.id"></moviebrowse-card>
+            </section>
+        </section><!--Movie Browse-->
+
+        <footer>
+            <section class="topFooter">
+                <div id="footerLogo">
+                    <img src="images/footer-logo.png" alt="Logo">
+                </div>
+                <nav id="footerMenu">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Roku Experience</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Partner</a></li>
+                </nav>
+            </section>
+
+            <section class="bottomFooter">
+                <p>© 2020 Roku, Inc. All rights reserved</p>
+
+                <nav id="privacy">
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li id="last"><a href="#">Legal</a></li>
+                </nav>
+            </section>
+        </footer>
+    </main>
+</body>
+
+<script src="js/main.js" type="module"></script>
+</html>

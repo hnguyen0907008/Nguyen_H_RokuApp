@@ -1,0 +1,179 @@
+//browse
+.browseHeader{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    justify-content: space-between;
+    #logo{
+        margin-top: 15px;
+        margin-left: 30px;
+        img{
+            width: 110px;
+        }
+        @include desktop {
+            margin-left: 100px;
+        }
+    }
+    #burgerMenu{
+        width: 50px; height: 50px;
+        margin-right: 30px;
+        margin-top: 15px;
+        img{
+            width: 100%;
+        }
+        @include desktop{
+            display: none;
+        }
+    }
+
+    #menuDropdown{
+        display: none;
+    }
+
+    #desktopMenu{
+        display: none;
+        @include desktop{
+            display: block;
+        }
+        padding-top: 20px;
+        margin-right: 100px;
+        ul{
+            li{
+                display: inline;
+                list-style-type: none;
+                margin-right: 30px;
+                a{
+                    text-decoration: none;
+                    color: black;
+                    font-family: $title-font;
+                }
+
+                a:hover{
+                    color: $main-color;
+                    padding-bottom: 5px;
+                    border-bottom: 3px solid $main-color;
+                }
+
+                input, #logout{
+                    @include roundCorners(8px);
+                    border: 2px solid $main-color;
+                    padding: 8px;
+                }
+
+                #logout:hover{
+                    color: white;
+                    background-color: $main-color;
+                }
+
+                //stylize search bar
+                input{
+                    background-color: $sec-color;
+                    width: 300px;
+                }
+                input:hover{
+                    background-color: white;
+                }
+            }
+        }   
+    }
+}
+
+.movieBrowse{
+    color: white;
+    width: 100%;
+
+    @include desktop{
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    .hero{
+        width: 100%;
+        height: 300px;
+
+    }
+
+    .filtering{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        #genre{
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 10px;
+
+            p{
+                font-family: $title-font;
+            }
+            #filteringList{
+                margin-left: 40px;
+                li{
+                    display: inline;
+                    list-style-type: none;
+                    margin-right: 10px;
+                    a{
+                        text-decoration: none;
+                        color: $sec-color;
+                    }
+                    a:hover{
+                        font-family: $title-font;
+                        border-bottom: 2px solid $sec-color;
+                    }
+                }
+            }
+        }
+    }
+
+    #banner-name{
+        font-family: $title-font;
+        text-align: center;
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .allMovies{
+        display: grid;
+        grid-gap: 20px;
+        padding: 0px 30px 30px;
+
+        @include tablet{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @include desktop{
+            grid-template-columns: 1fr 1fr;
+            padding: 0px 0px 30px;
+        }
+
+        .movieSummary{
+            background-color: #222222;
+            @include roundCorners(10px);
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+
+            @include tablet{
+                display: flex;
+                flex-direction: row;
+            }
+
+            h3{
+                color: $sec-color;
+                font-family: $title-font;
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            #movieImg{
+                img{
+                    height: 200px;
+                }
+            }
+
+            #movieInfo{
+                margin-left: 20px;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+//palette
+$main-color: #662d91;
+$sec-color: #d9c0ed;
+$grey: #313131;
+
+//font-family
+$main-font: 'GothamBook';
+$title-font: 'GothamBold';
+
+//font-size
+$big: 2em;
+$med: 1.5em;
+$sm: 16px;
+
+@font-face {
+    font-family: 'GothamBold';
+    src:  url('GothamNarrow-Bold.woff2') format('woff2'),
+          url('GothamNarrow-Bold.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'GothamBook';
+    src:  url('GothamNarrow-Book.woff2') format('woff2'),
+          url('GothamNarrow-Book.woff') format('woff');
+  }
