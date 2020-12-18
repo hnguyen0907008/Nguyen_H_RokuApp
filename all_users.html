@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roku Flashback - All Users</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/master.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <main id="app">
+        <h1 class="hidden">Roku Flashback - All Users</h1>
+        <header class="browseHeader">
+            <div id="logo">
+                <img src="images/main-logo.png" alt="Roku Logo">
+            </div>
+            <div id="burgerMenu">
+                <img src="images/burger.png" alt="Burger">
+            </div>
+            <div id="menuDropdown">
+                <ul>
+                    <li><a href="#">MOVIES</a></li>
+                    <li><a href="#">TV SHOWS</a></li>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><input id="search" type="text" value="Search"></li>
+                    <li><a href="#" id="logout">LOG OUT</a></li>
+                </ul>
+            </div>
+
+            <div id="desktopMenu">
+                <ul>
+                    <li><a href="movies_adult_browse.html">MOVIES</a></li>
+                    <li><a href="#">TV SHOWS</a></li>
+                    <li><a href="#">MUSIC</a></li>
+                    <li><input type="text" value="Search"></li>
+                    <li><a href="#" id="logout">LOG OUT</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="currentUsers">
+            <h2>CURRENT USERS</h2>
+
+            <!--UserComponent card-->
+            <div class="all-users">
+                <div class="users-list">
+                    <div class="user">
+                        <img src="images/user-icon.png" alt="">
+                        <p>Hien</p>
+                    </div>
+                    <div class="user">
+                        <img src="images/boy.png" alt="">
+                        <p>test</p>
+                    </div>
+                </div>
+                <button id="createuser">Create Users</button>
+            </div>
+        </section>
+
+        <footer>
+            <section class="topFooter">
+                <div id="footerLogo">
+                    <img src="images/footer-logo.png" alt="Logo">
+                </div>
+                <nav id="footerMenu">
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Roku Experience</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Partner</a></li>
+                </nav>
+            </section>
+
+            <section class="bottomFooter">
+                <p>© 2020 Roku, Inc. All rights reserved</p>
+
+                <nav id="privacy">
+                    <li><a href="#">Site Map</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms of use</a></li>
+                    <li id="last"><a href="#">Legal</a></li>
+                </nav>
+            </section>
+        </footer>
+    </main>
+</body>
+
+<script src="js/main.js" type="module"></script>
+
+</html>

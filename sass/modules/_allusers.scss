@@ -1,0 +1,46 @@
+.currentUsers{
+    @include desktop{
+        width: 1000px;
+        margin: 0 auto;
+    }
+
+    h2{
+        color: white;
+        font-family: $title-font;
+        font-size: 1.5em;
+        text-align: center;
+        margin: 20px 0px;
+    }
+
+    .all-users{
+        //vue card
+        .users-list{
+            //individual user section
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0 auto;
+            width: 100%;
+
+            @include tablet{
+                width: 50%;
+            }
+
+            .user{
+                display: flex;
+                flex-direction: column;
+                margin-left: 20px;
+                //
+                img{
+                    width: 100px;
+                    background-color: $main-color;
+                    @include roundCorners(10px);
+                    margin: 0 auto;
+                }
+                p{
+                    color: white;
+                }
+            }
+        }
+    }
+}

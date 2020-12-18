@@ -1,0 +1,89 @@
+body{
+    font-family: $main-font;
+    font-weight: normal;
+    font-size: $sm;
+}
+
+main{
+    .hidden{display: none;}
+    background-color:$grey;
+
+    //landing page
+    .landingHeader{
+        background-color: white;
+        display: flex;
+        flex-direction: row;
+        height: 80px;
+        #logo{
+            margin: 0 auto;
+            margin-top: 15px;
+            img{
+                width: 110px;
+            }
+        }
+    }
+
+    .landing{
+        background-color: purple;
+        background: url("../images/bg.jpg") no-repeat center;
+        width: 100%;
+        display: flex; flex-direction: column;
+        padding-bottom: 40px;
+
+        @include desktop{
+            display: flex; flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .landingDesign{
+            display: flex; flex-direction: column;
+            margin: 0 auto;
+            #texts{
+                width: 480px;
+                margin: 0 auto;
+            }
+        }
+
+        //sign in section
+        .welcome{
+            border: 10px solid $sec-color;
+            @include roundCorners(20px);
+            width: 300px;
+            height: 350px;
+            background-color: white;
+            margin: 0 auto;
+            padding: 30px;
+            text-align: center;
+            font-family: $title-font;
+            position: relative;
+
+            @include desktop{
+                margin-top: 40px;
+            }
+
+            h3{
+                font-size: $med; 
+            }
+
+            p{
+                color: $grey;
+            }
+
+            #buttonDesign{
+                background-color: $main-color;
+                color: white;
+                padding: 10px;
+                border: none;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                @include roundCorners(10px);
+                
+            }
+
+            #buttonDesign:hover{
+                background-color: $grey;
+            }
+        }
+    }
+}
+

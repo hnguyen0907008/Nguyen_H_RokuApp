@@ -1,0 +1,671 @@
+@font-face {
+  font-family: 'GothamBold';
+  src: url("GothamNarrow-Bold.woff2") format("woff2"), url("GothamNarrow-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'GothamBook';
+  src: url("GothamNarrow-Book.woff2") format("woff2"), url("GothamNarrow-Book.woff") format("woff");
+}
+
+nav li {
+  display: inline;
+  list-style-type: none;
+}
+
+nav li a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "GothamBook";
+  font-weight: normal;
+  font-size: 16px;
+}
+
+main {
+  background-color: #313131;
+}
+
+main .hidden {
+  display: none;
+}
+
+main .landingHeader {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 80px;
+}
+
+main .landingHeader #logo {
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+main .landingHeader #logo img {
+  width: 110px;
+}
+
+main .landing {
+  background-color: purple;
+  background: url("../images/bg.jpg") no-repeat center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 1024px) {
+  main .landing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+main .landing .landingDesign {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+
+main .landing .landingDesign #texts {
+  width: 480px;
+  margin: 0 auto;
+}
+
+main .landing .welcome {
+  border: 10px solid #d9c0ed;
+  border-radius: 20px;
+  width: 300px;
+  height: 350px;
+  background-color: white;
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  font-family: "GothamBold";
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  main .landing .welcome {
+    margin-top: 40px;
+  }
+}
+
+main .landing .welcome h3 {
+  font-size: 1.5em;
+}
+
+main .landing .welcome p {
+  color: #313131;
+}
+
+main .landing .welcome #buttonDesign {
+  background-color: #662d91;
+  color: white;
+  padding: 10px;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+}
+
+main .landing .welcome #buttonDesign:hover {
+  background-color: #313131;
+}
+
+.browseHeader {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.browseHeader #logo {
+  margin-top: 15px;
+  margin-left: 30px;
+}
+
+.browseHeader #logo img {
+  width: 110px;
+}
+
+@media (min-width: 1024px) {
+  .browseHeader #logo {
+    margin-left: 100px;
+  }
+}
+
+.browseHeader #burgerMenu {
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+  margin-top: 15px;
+}
+
+.browseHeader #burgerMenu img {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .browseHeader #burgerMenu {
+    display: none;
+  }
+}
+
+.browseHeader #menuDropdown {
+  display: none;
+}
+
+.browseHeader #desktopMenu {
+  display: none;
+  padding-top: 20px;
+  margin-right: 100px;
+}
+
+@media (min-width: 1024px) {
+  .browseHeader #desktopMenu {
+    display: block;
+  }
+}
+
+.browseHeader #desktopMenu ul li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 30px;
+}
+
+.browseHeader #desktopMenu ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "GothamBold";
+}
+
+.browseHeader #desktopMenu ul li a:hover {
+  color: #662d91;
+  padding-bottom: 5px;
+  border-bottom: 3px solid #662d91;
+}
+
+.browseHeader #desktopMenu ul li input, .browseHeader #desktopMenu ul li #logout {
+  border-radius: 8px;
+  border: 2px solid #662d91;
+  padding: 8px;
+}
+
+.browseHeader #desktopMenu ul li #logout:hover {
+  color: white;
+  background-color: #662d91;
+}
+
+.browseHeader #desktopMenu ul li input {
+  background-color: #d9c0ed;
+  width: 300px;
+}
+
+.browseHeader #desktopMenu ul li input:hover {
+  background-color: white;
+}
+
+.movieBrowse {
+  color: white;
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .movieBrowse {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.movieBrowse .hero {
+  width: 100%;
+  height: 300px;
+}
+
+.movieBrowse .filtering {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.movieBrowse .filtering #genre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.movieBrowse .filtering #genre p {
+  font-family: "GothamBold";
+}
+
+.movieBrowse .filtering #genre #filteringList {
+  margin-left: 40px;
+}
+
+.movieBrowse .filtering #genre #filteringList li {
+  display: inline;
+  list-style-type: none;
+  margin-right: 10px;
+}
+
+.movieBrowse .filtering #genre #filteringList li a {
+  text-decoration: none;
+  color: #d9c0ed;
+}
+
+.movieBrowse .filtering #genre #filteringList li a:hover {
+  font-family: "GothamBold";
+  border-bottom: 2px solid #d9c0ed;
+}
+
+.movieBrowse #banner-name {
+  font-family: "GothamBold";
+  text-align: center;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.movieBrowse .allMovies {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  padding: 0px 30px 30px;
+}
+
+@media (min-width: 768px) {
+  .movieBrowse .allMovies {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .movieBrowse .allMovies {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 0px 0px 30px;
+  }
+}
+
+.movieBrowse .allMovies .movieSummary {
+  background-color: #222222;
+  border-radius: 10px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  .movieBrowse .allMovies .movieSummary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.movieBrowse .allMovies .movieSummary h3 {
+  color: #d9c0ed;
+  font-family: "GothamBold";
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.movieBrowse .allMovies .movieSummary #movieImg img {
+  height: 200px;
+}
+
+.movieBrowse .allMovies .movieSummary #movieInfo {
+  margin-left: 20px;
+}
+
+.individual-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .individual-page {
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .individual-page {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.individual-page .show-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #662d91;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .individual-page .show-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.individual-page .show-details #movieImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.individual-page .show-details #movieImg img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .individual-page .show-details #movieImg {
+    width: 30%;
+  }
+  .individual-page .show-details #movieImg img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .individual-page .show-details #movieImg {
+    margin-right: 40px;
+    width: 20%;
+  }
+  .individual-page .show-details #movieImg img {
+    width: 100%;
+  }
+}
+
+.individual-page .show-details #movieInfo {
+  margin-left: 30px;
+}
+
+.individual-page .show-details #movieInfo h3 {
+  color: #d9c0ed;
+  font-family: "GothamBold";
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.individual-page .show-details #movieInfo p {
+  color: white;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+  .individual-page .show-details #movieInfo {
+    margin-left: 0px;
+  }
+}
+
+.individual-page .video-container {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.individual-page .video-container video {
+  width: 100%;
+}
+
+.individual-page .comment-section {
+  margin: 20px;
+}
+
+@media (min-width: 768px) {
+  .individual-page .comment-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+.individual-page .comment-section h2 {
+  font-family: "GothamBold";
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.individual-page .comment-section #comment-input {
+  width: 100%;
+  height: 80px;
+  margin-bottom: 20px;
+  outline: none;
+  resize: none;
+  border: 3px solid #d9c0ed;
+}
+
+.individual-page .comment-section #submit-comment {
+  padding: 8px 20px;
+  background-color: #662d91;
+  border: 2px solid #d9c0ed;
+  border-radius: 10px;
+  font-family: "GothamBold";
+  color: white;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+  .currentUsers {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+.currentUsers h2 {
+  color: white;
+  font-family: "GothamBold";
+  font-size: 1.5em;
+  text-align: center;
+  margin: 20px 0px;
+}
+
+.currentUsers .all-users .users-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .currentUsers .all-users .users-list {
+    width: 50%;
+  }
+}
+
+.currentUsers .all-users .users-list .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 20px;
+}
+
+.currentUsers .all-users .users-list .user img {
+  width: 100px;
+  background-color: #662d91;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.currentUsers .all-users .users-list .user p {
+  color: white;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+footer .topFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #662d91;
+  font-family: "GothamBold";
+}
+
+footer .topFooter #footerLogo {
+  margin: 0 auto;
+  margin: 15px;
+}
+
+footer .topFooter #footerLogo img {
+  width: 110px;
+}
+
+footer .topFooter #footerMenu {
+  margin-bottom: 20px;
+}
+
+footer .topFooter #footerMenu li {
+  margin-left: 15px;
+}
+
+footer .topFooter #footerMenu li a {
+  color: white;
+}
+
+footer .topFooter #footerMenu li a:hover {
+  color: #d9c0ed;
+}
+
+footer .bottomFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #313131;
+  font-size: 14px;
+  color: white;
+}
+
+footer .bottomFooter p {
+  margin: 10px 0px 5px;
+}
+
+footer .bottomFooter #privacy {
+  margin-bottom: 10px;
+}
+
+footer .bottomFooter #privacy li {
+  border-right: 1px solid white;
+  padding: 0px 15px;
+}
+
+footer .bottomFooter #privacy li a {
+  color: white;
+}
+
+footer .bottomFooter #privacy #last {
+  border-right: none;
+}
+/*# sourceMappingURL=master.css.map */
